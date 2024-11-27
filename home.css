@@ -1,0 +1,284 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #003366;
+    color: #f5f5f5;
+    position: fixed;
+    top: 0;
+    width: 99%;
+    z-index: 2;
+}
+.navbar-links{
+    display: flex;
+    column-gap: 20px;
+}
+.navbar-links p{
+    color: #F5F5F5;
+    padding-top: 10px;
+}
+.navbar-links a{
+    text-decoration: none;
+    color: #F5F5F5;
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+}
+.navbar-links a:hover{
+    text-decoration: underline;
+
+
+}
+.navbar-menu-toggle{
+    display: none;
+}
+/* side Navbar*/
+.side-navbar{
+    background-color:#003366; 
+    width: 50%;
+    height: 100%;
+    position:fixed;
+    top: 0;
+    left: -60%;
+    padding: 20px;
+    color:#f5f5f5;
+    transition: 2s;
+}
+.side-navbar-link{
+    margin-bottom: 30px;
+    
+}
+.side-navbar-links a{
+    text-decoration: none;
+    color: white;
+}
+.side-navbar-links a:hover{
+    text-decoration: underline;
+}
+/*image slider*/
+
+.sliders{
+    width:95%;
+    height:400px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50% , -50%);
+    background-image:url(pics/pic1.jpg);
+    background-size:100% 100%;
+    box-shadow:1px 2px 10px 10px #333333;
+    animation:slider 10s infinite linear;
+    z-index: 1;
+    
+    
+}
+    @keyframes slider{
+    
+    0%{
+    background-image:url(pics/pic2.jpeg);
+    }
+    35%{
+    background-image:url(pics/pic3.jpg);
+    }
+    75%{
+    background-image:url(pics/pic4.jpg);
+    }
+    
+    
+    }
+/*course*/
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    /*to fix size*/
+    margin-top: 40%;
+}
+h1{
+    font-size: 36px;
+    font-weight: 300;
+}
+p{
+    color:#333333;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.row .course-col p{
+    color: #F5F5F5;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.course-col{
+    flex-basis: 31%;
+    background:#003366;
+    border-radius: 10px;
+    margin-bottom:5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0px;
+}
+.course-col:hover {
+    box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.9);
+}
+.course-col:hover h2{
+    text-decoration: underline;
+    color: #F5F5F5;
+}
+/********** Gallery CSS Starts **********/  
+.gallery h2{
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 36px;
+    font-weight: 300;
+}
+.gallery img {
+    width: 24%;
+    height: 200px;
+}
+/********** Gallery CSS Ends **********/
+/*placement*/
+/********** Placement CSS Starts **********/  
+.main-section h2{
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 36px;
+    font-weight: 300;
+    padding: 30px;
+
+}
+/*.placement {
+    background-color: #003366;
+    
+}*/
+.placement img {
+    border:1px solid black;
+}
+/********** Placement CSS Ends **********/
+/*footer*/
+/********** Footer CSS Starts **********/  
+.footer {
+    background-color:#003366;
+    padding:70px 50px;
+    width:100%;
+    float:left;
+    margin-top: 20px;
+}
+.footer-sect {
+    width:33%;
+    float:left;
+}
+.footer-sect h2 {
+    color:#F5F5F5;
+    margin-bottom: 20px;
+}
+.footer-sect:hover h2{
+    text-decoration: underline;
+}
+.footer-sect p {
+    color: #F5F5F5;
+    line-height: 22px;
+    padding:0px 30px 20px 0px;
+}
+.footer-menu li {
+    width: 50%;
+    float: left;
+    margin-bottom: 10px;
+}
+.footer-menu li a {
+    color:#F5F5F5;
+    text-decoration: none;
+}
+.footer-contact li {
+    margin-bottom:15px;
+    list-style: none;
+    color: #F5F5F5;
+}
+/********** Footer CSS Ends **********/
+
+/*hover*/
+.topcouse:hover h1{
+    text-decoration: underline;
+ }
+ .main-section:hover h2{
+     text-decoration: underline;
+ }
+ .gallery:hover h2{
+     text-decoration: underline;
+ }
+
+
+
+
+
+
+
+
+@media  screen and (max-width:600px) {
+    .navbar-menu-toggle{
+        display: block;
+        padding: 12px;
+
+    }
+    .navbar-links{
+        display: none;
+        
+    }
+    .side-navbar{
+        z-index: 2;
+    }
+    .sliders{
+        z-index: 1;
+    }
+    .row{
+        display: block;
+        margin-top: 15%;
+    }
+    .topcouse {
+     margin-top: 70%;
+    }
+    .topcouse:hover h1{
+       text-decoration: underline;
+    }
+    .main-section:hover h2{
+        text-decoration: underline;
+    }
+    .gallery:hover h2{
+        text-decoration: underline;
+    }
+    .gallery img {
+        width: 100%;
+        height: 200px;
+        background-color: #003366;
+        }
+
+        /* about us section*/
+        .about img{
+            display: none;
+        }
+        /*campus*/
+        .campushead h1{
+            margin-top: 20%;
+        }
+}
